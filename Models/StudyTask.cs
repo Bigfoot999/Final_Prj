@@ -7,35 +7,29 @@ using Final_Prj.Repository;
 
 namespace Final_Prj.Models
 {
-    class StudyTask : Task
+    class StudyTask : TaskEntity, IComparable<StudyTask>
     {
-        private TaskRepository taskRepository;
-        private User User;
-        public int Id { get; set; }
-        public string TaskName { get; set; }
-        public string Description { get; set; }
-        public DateTime DueDate { get; set; }   //deadline  
-        public string Status { get; set; }
-        public string Priority { get; set; }
-        public String Subject { get; set; }  //Môn học
-        public StudyTask(int id, string taskName, string description, DateTime dueDate, string status, string priority, User user, string subject)
+        private TaskStudyRepository taskRepository;
+        
+        public string Subject { get; set; }  //Môn học
+
+        public StudyTask(int id, string taskName, string description, DateTime dueDate, string status, string priority, string subject)
+        : base(id, taskName, description, dueDate, status, priority)
         {
-            this.taskRepository = new TaskRepository();
-            this.User = user;
-            this.Id = id;
-            this.TaskName = taskName;
-            this.Description = description;
-            this.DueDate = dueDate;
-            this.Status = status;
-            this.Priority = priority;
-            this.User = user;
             this.Subject = subject;
-
+            this.taskRepository = new TaskStudyRepository();
         }
-        public StudyTask()
+
+        public StudyTask() :base()
         {
         }
 
-
+        //So sánh 2 task theo deadline
+        public int CompareTo(StudyTask other)
+        {
+            if (other == null)
+                return 1;
+            return this.DueDate.CompareTo(other.DueDate);
+        }
     }
 }

@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Final_Prj.Repository
 {
-    class TaskRepository
+    class TaskWorkRepository
     {
-
     }
 }

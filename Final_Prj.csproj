@@ -43,16 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\TaskController.cs" />
+    <Compile Include="Controllers\TaskStudyController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Decoration\Decor_Task.cs" />
     <Compile Include="Decoration\Decor_User.cs" />
     <Compile Include="Models\StudyTask.cs" />
-    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\TaskEntity.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\TaskRepository.cs" />
+    <Compile Include="Repository\ExcelFile.cs" />
+    <Compile Include="Repository\TaskStudyRepository.cs" />
+    <Compile Include="Repository\TaskWorkRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
