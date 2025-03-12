@@ -8,6 +8,7 @@ namespace Final_Prj.Models
 {
     class User
     {
+        static int id = 1;
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
@@ -16,15 +17,21 @@ namespace Final_Prj.Models
             Id = id;
             Username = username;
             Password = password;
+            id++;
+
+        }
+        public User( string username, string password)
+        {
+            id = id + 1;
+            Username = username;
+            Password = password;
+            id++;
+
         }
         public User()
         {
         }
-        public User(string username, string password)
-        {
-            Username = username;
-            Password = password;
-        }
+       
 
         public override string ToString()
         {

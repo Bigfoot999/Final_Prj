@@ -9,15 +9,13 @@ namespace Final_Prj.Models
 {
     class StudyTask : TaskEntity, IComparable<StudyTask>
     {
-        private TaskStudyRepository taskRepository;
-        
+   
         public string Subject { get; set; }  //Môn học
 
         public StudyTask(int id, string taskName, string description, DateTime dueDate, string status, string priority, string subject)
         : base(id, taskName, description, dueDate, status, priority)
         {
             this.Subject = subject;
-            this.taskRepository = new TaskStudyRepository();
         }
 
         public StudyTask() :base()

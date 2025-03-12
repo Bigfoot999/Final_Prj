@@ -17,20 +17,20 @@ namespace Final_Prj.Repository
             this.FileName = FileName;
         }
 
-        public int save(StudyTask studyTask)
+        public int saveStudyTask(StudyTask studyTask)
         {
-            // code here để lưu toàn bộ thông tin stuuTask vào file excel
+            // code here để lưu toàn bộ thông tin studyTask vào file excel
             return 1; // trả về 1 nếu lưu thành công, 0 nếu lưu thất bại 
         }
 
-        internal List<StudyTask> GetAllTask()
+        public List<StudyTask> GetAllStudyTask()
         {
             // ý tưởng
             // đọc tuần tự cho đến hết từng hàng rồi gán từng giá trị của hàng vào các thuộc tính của StudyTask
             return new List<StudyTask>();
         }
 
-        public  List<StudyTask> GetTaskById(int id)
+        public  List<StudyTask> GetStudyTaskById(int id)
         {
             List<StudyTask> studyTasksID = new List<StudyTask>();
             // ý tưởng
@@ -39,7 +39,7 @@ namespace Final_Prj.Repository
             return studyTasksID;
         }
 
-        internal List<StudyTask> GetTaskByName(string name)
+        public List<StudyTask> GetStudyTaskByName(string name)
         {
             List<StudyTask> studyTasksName = new List<StudyTask>();
             // ý tưởng tương tự như get Task by ID
@@ -47,15 +47,54 @@ namespace Final_Prj.Repository
 
         }
 
-        public string RemoveTask(StudyTask taskStudy)
+        public string RemoveTask(string taskName)
         {
-            // chưa có ý tưởng
+            // dò theo name để xoá, không dò theo Id vì Id có thể trùng nhau
             return "Xoá Task thành công"; // nếu xoá dược thì trả về thông báo khi xoá thành công không xoá được thì báo không xoá được
         }
 
-        public string UpdateTask(StudyTask task)
+        public string UpdateStudyTask(StudyTask task)
         {
-            //ý tưởng là gọi hàm RemoveTask rồi gọi hàm save
+            //ý tưởng là gọi hàm RemoveTask rồi gọi hàm saveStudyTask
+            // check các giá trị trả về của 2 hàm trên để trả về thông báo
+            return "Cập nhật Task thành công";
+        }
+
+
+        // ====== Work Task =========
+
+        public int saveWorkTask(WorkTask workTask)
+        {
+            // code here để lưu toàn bộ thông tin studyTask vào file excel
+            return 1; // trả về 1 nếu lưu thành công, 0 nếu lưu thất bại 
+        }
+
+        public List<WorkTask> GetAllWorkTask()
+        {
+            // ý tưởng
+            // đọc tuần tự cho đến hết từng hàng rồi gán từng giá trị của hàng vào các thuộc tính của StudyTask
+            return new List<WorkTask>();
+        }
+
+        public List<WorkTask> GetWorkTaskById(int id)
+        {
+            List<WorkTask> workTasksID = new List<WorkTask>();
+            // ý tưởng
+            // đọc tuần tự cho đến hết từng hàng rồi gán từng giá trị của hàng vào các thuộc tính của StudyTask nếu hàng đó có cột id cần tìm
+            // gán vào 1 list StudyTask rồi rturn list này
+            return workTasksID;
+        }
+
+        public List<WorkTask> GetWorkTaskByName(string name)
+        {
+            List<WorkTask> workTasksName = new List<WorkTask>();
+            // ý tưởng tương tự như get Task by ID
+            return workTasksName;
+        }
+
+        public string UpdateWorkTask(WorkTask task)
+        {
+            //ý tưởng là gọi hàm RemoveTask rồi gọi hàm saveWorkTask
             // check các giá trị trả về của 2 hàm trên để trả về thông báo
             return "Cập nhật Task thành công";
         }

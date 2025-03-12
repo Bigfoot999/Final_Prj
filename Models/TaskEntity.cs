@@ -10,7 +10,7 @@ namespace Final_Prj.Models
     public abstract class  TaskEntity
     {
          public int Id { get; set; } //Quản lý id của task bằng Id của user
-        public string TaskName { get; set; }
+         public string TaskName { get; set; }
          public string Description { get; set; }
          public DateTime DueDate { get; set; }   //deadline  
          public string Status { get; set; }

@@ -8,5 +8,6 @@ namespace Final_Prj.Decoration
 {
     class Decor_Task
     {
+        public Decor_Task() { }
     }
 }

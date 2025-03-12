@@ -34,9 +34,9 @@ namespace Final_Prj.Controllers
             return taskStudyRepository.GetTaskByName(name);
         }
 
-        public string RemoveTask(StudyTask task)
+        public string RemoveTask(string taskName)
         {
-            return taskStudyRepository.RemoveTask(task);
+            return taskStudyRepository.RemoveTask(taskName);
         }
 
         public string UpdateTask(StudyTask task)

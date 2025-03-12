@@ -16,7 +16,7 @@ namespace Final_Prj.Repository
         }
         public string AddTask(StudyTask studyTask)
         {
-            int value = excelFile_StudyTask.save(studyTask);
+            int value = excelFile_StudyTask.saveStudyTask(studyTask);
             if (value == 1)
                 return "Lưu task thành công";
             else
@@ -25,28 +25,28 @@ namespace Final_Prj.Repository
 
         public List<StudyTask> GetAllTasks()
         {
-            return excelFile_StudyTask.GetAllTask();
+            return excelFile_StudyTask.GetAllStudyTask();
         }
 
         public List<StudyTask> GetTaskById(int id)
         {
-            return excelFile_StudyTask.GetTaskById(id);
-
+            return excelFile_StudyTask.GetStudyTaskById(id);
+        }
         public List<StudyTask> GetTaskByName(string name)
         {
-            return excelFile_StudyTask.GetTaskByName(name);
+            return excelFile_StudyTask.GetStudyTaskByName(name);
         }
 
-        public string RemoveTask(StudyTask taskStudy)
+        public string RemoveTask(string taskName)
         {
-            return excelFile_StudyTask.RemoveTask(taskStudy);
+            return excelFile_StudyTask.RemoveTask(taskName);
         }
 
 
 
         public string UpdateTask(StudyTask task)
         {
-            return excelFile_StudyTask.UpdateTask(task);
+            return excelFile_StudyTask.UpdateStudyTask(task);
         }
         public List<StudyTask> SortTask()
         {
