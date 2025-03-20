@@ -114,26 +114,27 @@ namespace Final_Prj.Decoration_View
                     {
                         MessageBox.Show("Task has been updated successfully", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else if (e.ColumnIndex == 8)
-                    {
-                        // Xác nhận xóa hàng
-                        DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa công việc này?", "Xác nhận", MessageBoxButtons.YesNo);
-                        int id = Convert.ToInt32(dataGridViewStudyTask.Rows[e.RowIndex].Cells["ID"].Value);
-                        bool tmp = taskStudyController.DeleteTask(id);
-                        if (result == DialogResult.Yes)
-                        {
-                            // Lấy tên ID công việc khi nhấn nút Delete
-
-                            tmp = taskStudyController.DeleteTask(id);
-                            if (tmp)
-                                MessageBox.Show("Xoá thành công!");
-                            else
-                                MessageBox.Show("Xoá không thành công!");
-                        }
-                    }
-
                 }
+                else if (e.ColumnIndex == 8)
+                {
+                    // Xác nhận xóa hàng
+                    DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa công việc này?", "Xác nhận", MessageBoxButtons.YesNo);
+                    int id = Convert.ToInt32(dataGridViewStudyTask.Rows[e.RowIndex].Cells["ID"].Value);
+                    bool tmp = taskStudyController.DeleteTask(id);
+                    if (result == DialogResult.Yes)
+                    {
+                        // Lấy tên ID công việc khi nhấn nút Delete
+
+                        tmp = taskStudyController.DeleteTask(id);
+                        if (tmp)
+                            MessageBox.Show("Xoá thành công!");
+                        else
+                            MessageBox.Show("Xoá không thành công!");
+                    }
+                }
+
             }
         }
     }
 }
+
