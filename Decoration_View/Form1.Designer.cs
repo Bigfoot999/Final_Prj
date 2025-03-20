@@ -70,6 +70,8 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -79,8 +81,9 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.lblLogin);
             this.panel1.Controls.Add(this.btnRegister);
@@ -140,7 +143,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 74);
+            this.label2.Location = new System.Drawing.Point(31, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 3;
@@ -149,7 +152,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 23);
+            this.label1.Location = new System.Drawing.Point(31, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 2;
@@ -157,7 +160,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(124, 71);
+            this.txtPassword.Location = new System.Drawing.Point(124, 80);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(187, 20);
             this.txtPassword.TabIndex = 1;
@@ -166,7 +169,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(124, 16);
+            this.txtUsername.Location = new System.Drawing.Point(124, 35);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(187, 20);
             this.txtUsername.TabIndex = 0;
@@ -234,6 +237,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.trackBar2);
             this.panel2.Controls.Add(this.txtSDueDate);
@@ -249,9 +253,9 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(494, 12);
+            this.panel2.Location = new System.Drawing.Point(503, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(488, 286);
+            this.panel2.Size = new System.Drawing.Size(508, 314);
             this.panel2.TabIndex = 3;
             // 
             // txtSDueDate
@@ -315,7 +319,8 @@
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.BackColor = System.Drawing.SystemColors.Info;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.trackBar1);
             this.panel3.Controls.Add(this.txtWDue);
             this.panel3.Controls.Add(this.btnWcreate);
@@ -330,7 +335,7 @@
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Location = new System.Drawing.Point(0, 12);
+            this.panel3.Location = new System.Drawing.Point(9, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(488, 314);
             this.panel3.TabIndex = 3;
@@ -457,7 +462,9 @@
             // 
             // btnViewW
             // 
-            this.btnViewW.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnViewW.AutoEllipsis = true;
+            this.btnViewW.AutoSize = true;
+            this.btnViewW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewW.Location = new System.Drawing.Point(741, 383);
             this.btnViewW.Name = "btnViewW";
             this.btnViewW.Size = new System.Drawing.Size(107, 28);
@@ -469,6 +476,8 @@
             // 
             // btnViewS
             // 
+            this.btnViewS.AutoSize = true;
+            this.btnViewS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewS.Location = new System.Drawing.Point(740, 434);
             this.btnViewS.Name = "btnViewS";
             this.btnViewS.Size = new System.Drawing.Size(107, 29);
@@ -480,23 +489,48 @@
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.monthCalendar1.Location = new System.Drawing.Point(18, 378);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 6;
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(164, 186);
+            this.trackBar1.Location = new System.Drawing.Point(164, 193);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(213, 45);
             this.trackBar1.TabIndex = 7;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // trackBar2
             // 
-            this.trackBar2.Location = new System.Drawing.Point(164, 186);
+            this.trackBar2.Location = new System.Drawing.Point(164, 192);
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Size = new System.Drawing.Size(213, 45);
             this.trackBar2.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(915, 589);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Form1
             // 
@@ -504,6 +538,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1014, 627);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.btnViewS);
             this.Controls.Add(this.btnViewW);
@@ -522,6 +558,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -569,5 +606,7 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClose;
     }
 }

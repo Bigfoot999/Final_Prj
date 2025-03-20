@@ -164,5 +164,15 @@ namespace Final_Prj.Decoration_View
             Form form = new StudyTask_Form(txtUsername.Text);
             form.Show();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
