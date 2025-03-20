@@ -48,7 +48,6 @@
             this.btnScreate = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtSSubject = new System.Windows.Forms.TextBox();
-            this.txtSPriority = new System.Windows.Forms.TextBox();
             this.txtSStatus = new System.Windows.Forms.TextBox();
             this.txtSDescription = new System.Windows.Forms.TextBox();
             this.txtSTaskName = new System.Windows.Forms.TextBox();
@@ -57,7 +56,6 @@
             this.btnWcreate = new System.Windows.Forms.Button();
             this.WorkStudy = new System.Windows.Forms.Label();
             this.txtWtype = new System.Windows.Forms.TextBox();
-            this.txtWprio = new System.Windows.Forms.TextBox();
             this.txtWstatus = new System.Windows.Forms.TextBox();
             this.txtWDes = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -69,9 +67,14 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btnViewW = new System.Windows.Forms.Button();
             this.btnViewS = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -203,7 +206,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 229);
+            this.label8.Location = new System.Drawing.Point(22, 242);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 20);
             this.label8.TabIndex = 5;
@@ -232,11 +235,11 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.trackBar2);
             this.panel2.Controls.Add(this.txtSDueDate);
             this.panel2.Controls.Add(this.btnScreate);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtSSubject);
-            this.panel2.Controls.Add(this.txtSPriority);
             this.panel2.Controls.Add(this.txtSStatus);
             this.panel2.Controls.Add(this.txtSDescription);
             this.panel2.Controls.Add(this.txtSTaskName);
@@ -283,17 +286,10 @@
             // 
             // txtSSubject
             // 
-            this.txtSSubject.Location = new System.Drawing.Point(164, 229);
+            this.txtSSubject.Location = new System.Drawing.Point(164, 242);
             this.txtSSubject.Name = "txtSSubject";
             this.txtSSubject.Size = new System.Drawing.Size(213, 20);
             this.txtSSubject.TabIndex = 11;
-            // 
-            // txtSPriority
-            // 
-            this.txtSPriority.Location = new System.Drawing.Point(164, 197);
-            this.txtSPriority.Name = "txtSPriority";
-            this.txtSPriority.Size = new System.Drawing.Size(213, 20);
-            this.txtSPriority.TabIndex = 10;
             // 
             // txtSStatus
             // 
@@ -320,11 +316,11 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.trackBar1);
             this.panel3.Controls.Add(this.txtWDue);
             this.panel3.Controls.Add(this.btnWcreate);
             this.panel3.Controls.Add(this.WorkStudy);
             this.panel3.Controls.Add(this.txtWtype);
-            this.panel3.Controls.Add(this.txtWprio);
             this.panel3.Controls.Add(this.txtWstatus);
             this.panel3.Controls.Add(this.txtWDes);
             this.panel3.Controls.Add(this.label10);
@@ -372,17 +368,10 @@
             // 
             // txtWtype
             // 
-            this.txtWtype.Location = new System.Drawing.Point(164, 231);
+            this.txtWtype.Location = new System.Drawing.Point(164, 244);
             this.txtWtype.Name = "txtWtype";
             this.txtWtype.Size = new System.Drawing.Size(213, 20);
             this.txtWtype.TabIndex = 11;
-            // 
-            // txtWprio
-            // 
-            this.txtWprio.Location = new System.Drawing.Point(164, 197);
-            this.txtWprio.Name = "txtWprio";
-            this.txtWprio.Size = new System.Drawing.Size(213, 20);
-            this.txtWprio.TabIndex = 10;
             // 
             // txtWstatus
             // 
@@ -403,7 +392,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(22, 231);
+            this.label10.Location = new System.Drawing.Point(22, 244);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 20);
             this.label10.TabIndex = 5;
@@ -489,11 +478,33 @@
             this.btnViewS.Visible = false;
             this.btnViewS.Click += new System.EventHandler(this.btnViewS_Click);
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(18, 378);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 6;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(164, 186);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(213, 45);
+            this.trackBar1.TabIndex = 7;
+            // 
+            // trackBar2
+            // 
+            this.trackBar2.Location = new System.Drawing.Point(164, 186);
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.Size = new System.Drawing.Size(213, 45);
+            this.trackBar2.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1014, 627);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.btnViewS);
             this.Controls.Add(this.btnViewW);
             this.Controls.Add(this.panel3);
@@ -508,6 +519,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -531,14 +544,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtSSubject;
-        private System.Windows.Forms.TextBox txtSPriority;
         private System.Windows.Forms.TextBox txtSStatus;
         private System.Windows.Forms.TextBox txtSDescription;
         private System.Windows.Forms.TextBox txtSTaskName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label WorkStudy;
-        private System.Windows.Forms.TextBox txtWprio;
         private System.Windows.Forms.TextBox txtWstatus;
         private System.Windows.Forms.TextBox txtWDes;
         private System.Windows.Forms.TextBox txtWname;
@@ -555,5 +566,8 @@
         private System.Windows.Forms.DateTimePicker txtSDueDate;
         private System.Windows.Forms.Button btnViewW;
         private System.Windows.Forms.Button btnViewS;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar trackBar2;
     }
 }

@@ -122,10 +122,10 @@ namespace Final_Prj.Decoration_View
         private void btnWcreate_Click(object sender, EventArgs e)
         {
             User user = userController.GetUserByUsername(txtUsername.Text);
-
+            String value = trackBar1.Value.ToString();
             WorkTask workTask = new WorkTask(user.Id, taskWorkController.GetNextId(), txtWname.Text,
                 txtWDes.Text, Convert.ToDateTime(txtWDue.Text),
-                txtWstatus.Text, txtWprio.Text, txtWtype.Text);
+                txtWstatus.Text, value, txtWtype.Text);
             String result = taskWorkController.AddTask(workTask);
             MessageBox.Show(result, result, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -134,11 +134,11 @@ namespace Final_Prj.Decoration_View
         private void btnScreate_Click(object sender, EventArgs e)
         {
             User user = userController.GetUserByUsername(txtUsername.Text);
-
+            String value = trackBar2.Value.ToString();
             StudyTask studyTask = new StudyTask(user.Id, taskStudyController.GetNextId(), 
                 txtSTaskName.Text , txtSDescription.Text, 
                 Convert.ToDateTime(txtSDueDate.Text), 
-                txtSStatus.Text, txtSPriority.Text, txtSSubject.Text);
+                txtSStatus.Text, value, txtSSubject.Text);
             String result = taskStudyController.AddTask(studyTask);
             MessageBox.Show(result);
         }
