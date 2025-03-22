@@ -44,6 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.txtSDueDate = new System.Windows.Forms.DateTimePicker();
             this.btnScreate = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.txtSDescription = new System.Windows.Forms.TextBox();
             this.txtSTaskName = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.txtWDue = new System.Windows.Forms.DateTimePicker();
             this.btnWcreate = new System.Windows.Forms.Button();
             this.WorkStudy = new System.Windows.Forms.Label();
@@ -68,15 +70,12 @@
             this.btnViewW = new System.Windows.Forms.Button();
             this.btnViewS = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -258,6 +257,13 @@
             this.panel2.Size = new System.Drawing.Size(508, 314);
             this.panel2.TabIndex = 3;
             // 
+            // trackBar2
+            // 
+            this.trackBar2.Location = new System.Drawing.Point(164, 192);
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.Size = new System.Drawing.Size(213, 45);
+            this.trackBar2.TabIndex = 7;
+            // 
             // txtSDueDate
             // 
             this.txtSDueDate.Location = new System.Drawing.Point(165, 127);
@@ -340,6 +346,14 @@
             this.panel3.Size = new System.Drawing.Size(488, 314);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(164, 193);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(213, 45);
+            this.trackBar1.TabIndex = 7;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // txtWDue
             // 
@@ -462,7 +476,6 @@
             // 
             // btnViewW
             // 
-            this.btnViewW.AutoEllipsis = true;
             this.btnViewW.AutoSize = true;
             this.btnViewW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewW.Location = new System.Drawing.Point(741, 383);
@@ -494,30 +507,6 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 6;
             // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(164, 193);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(213, 45);
-            this.trackBar1.TabIndex = 7;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            // 
-            // trackBar2
-            // 
-            this.trackBar2.Location = new System.Drawing.Point(164, 192);
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(213, 45);
-            this.trackBar2.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -539,7 +528,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1014, 627);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.btnViewS);
             this.Controls.Add(this.btnViewW);
@@ -547,16 +535,17 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhóm XXX";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,7 +595,6 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.TrackBar trackBar2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
     }
 }
