@@ -61,6 +61,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dataGridViewWorkTask);
             this.Name = "WorkTask_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Work Task Timeline";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorkTask)).EndInit();

@@ -60,6 +60,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dataGridViewStudyTask);
             this.Name = "StudyTask_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Study Task Timeline";
             this.Load += new System.EventHandler(this.StudyTask_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudyTask)).EndInit();

@@ -40,6 +40,7 @@ namespace Final_Prj.Decoration_View
 
 
             List<StudyTask> tasks = taskStudyController.GetTaskById(user.Id);
+            tasks.Sort();
             //BindingList<int> workList = new BindingList<int>();
             DataTable dataTable = new DataTable("Study Task");
             //public WorkTask(int userid, int id, string taskName, string description, DateTime dueDate, string status, string priority, string taskType): 

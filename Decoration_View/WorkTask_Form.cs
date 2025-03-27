@@ -53,6 +53,7 @@ namespace Final_Prj.Decoration_View
             //dataGridViewWorkTask.DataSource = taskWorkController.GetAllTasks();
             //List<WorkTask> tasks = taskWorkController.GetTaskById(user.Id);
             List<WorkTask> tasks = taskWorkController.GetTaskById(user.Id);
+            tasks.Sort();
             //BindingList<int> workList = new BindingList<int>();
             DataTable dataTable = new DataTable("Work Task");
             //public WorkTask(int userid, int id, string taskName, string description, DateTime dueDate, string status, string priority, string taskType): 
